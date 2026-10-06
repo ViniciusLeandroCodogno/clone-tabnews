@@ -16,13 +16,7 @@ jobs:
       - run: npm ci
 
       - run: npm run lint:prettier:check
-
-name: Linting
-
-on: pull_request
-
-jobs:
-  prettier:
+  eslint:
     name: ESlint
     runs-on: ubuntu-latest
     steps:
