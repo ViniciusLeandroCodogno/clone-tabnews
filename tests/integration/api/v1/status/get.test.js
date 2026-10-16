@@ -11,8 +11,8 @@ describe("POST /api/v1/status", () => {
 
       const responseBody = await response.json();
 
-      const parsedUpdateAt = new Date(responseBody.update_at).toISOString();
-      expect(responseBody.update_at).toEqual(parsedUpdateAt);
+      const parsedUpdatedAt = new Date(responseBody.updated_at).toISOString();
+      expect(responseBody.updated_at).toEqual(parsedUpdatedAt);
 
       const postgresVersion = "16.0";
       expect(responseBody.dependencies.database.version).toEqual(
