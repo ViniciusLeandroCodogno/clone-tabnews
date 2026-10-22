@@ -92,7 +92,6 @@ describe("POST /api/v1/users", () => {
         }),
       });
 
-      console.log("STATUS: ", response1.status);
       expect(response1.status).toBe(201);
 
       const response2 = await fetch("http://localhost:3000/api/v1/users", {
