@@ -7,6 +7,10 @@ const config = [
   {
     files: ["**/*.{js,jsx,ts,tsx}"],
     ...jest.configs["flat/recommended"],
+    rules: {
+      "no-undef": "error",
+      "no-unused-vars": "error",
+    },
   },
   prettier,
 ];
